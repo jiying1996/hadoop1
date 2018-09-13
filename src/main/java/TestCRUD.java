@@ -87,9 +87,10 @@ public class TestCRUD {
                 System.out.println("======"+watchedEvent.getType());
             }
         });
+        
         Thread.sleep(10*1000);
         byte[] bytes = zkClient.getData("/age",false,null);
-        System.out.println("节点的数据为："+ new String(bytes));
+        System.out.println("节点的数据为："+ new String(bytes)+"-----");
     }
     
     //获取子节点
